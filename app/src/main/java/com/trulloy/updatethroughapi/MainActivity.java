@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-            return null;
+            return "fail";
         }
 
         @Override
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             super.onPostExecute(result);
             // TODO: Change the UI and update all state list
             if (worldData != null) {
-
+                worldTxtView.setText(worldData.toString());
             }
         }
     }
